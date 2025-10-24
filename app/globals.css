@@ -2,20 +2,13 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --foreground: #ffadad;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #0008ffff;
   }
 }
 
@@ -23,4 +16,69 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gameBoard {
+  flex: 1;
+}
+
+.gameInfo {
+  width: 100px;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.boardRow {
+  display: flex;
+}
+
+.square {
+  background: #ffffff;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+  cursor: pointer;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.gameInfo ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.gameInfo li {
+  margin-bottom: 8px;
+}
+
+.gameInfo button {
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  text-align: left;
+}
+
+.gameInfo button:hover {
+  background: #000000;
 }
